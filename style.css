@@ -1,0 +1,53 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: hsl(210, 20%, 98%);
+    color: lab(21.25% 0 0);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 60px;
+    background-color: hwb(215 12% 78%);
+}
+
+.logo img {
+    height: 45px;
+}
+
+.brand-name {
+    color: #e0f2fe;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: hsl(198, 93%, 60%);
+    border-bottom: 2px solid hsl(198, 93%, 60%);
+    padding-bottom: 3px;
+}
