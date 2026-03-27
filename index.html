@@ -1,72 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 2 | Navigation Layout</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="images/spider logo1.jpeg" alt="company logo">
-                <span class="brand-name">Job-Webbers</span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 2 | Navigation Layout</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <div class="navbar">
+                <div class="nav-left">
+                    <img src="media/da-logo.jpeg" alt="DA Logo" class="logo">
+                    <h1 class="brand-name">DA Recruitment Portal</h1>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
             </div>
-
-            <ul class="nav-links">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
         </nav>
-    </header>
 
-    <section class="table-section">
-        <h2>Student Records</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Course</th>
-                    <th>Year</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>01</td>
-                    <td>P. Anthony Dibakoane</td>
-                    <td>Network Systems</td>
-                    <td>2024</td>
-                </tr>
-                <tr>
-                    <td>02</td>
-                    <td>Jame Smith</td>
-                    <td>Cyber Security</td>
-                    <td>2024</td>
-                </tr>
-                <tr>
-                    <td>03</td>
-                    <td>Sarah Johan</td>
-                    <td>Software Developement</td>
-                    <td>2024</td>
-                </tr>
-                <tr>
-                    <td>04</td>
-                    <td>Lisedi Nkosi</td>
-                    <td>Cloud Computing</td>
-                    <td>2024</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+        <main>
+            <div class="content-card">
+                <div class="section-header">
+                    <h2 class="section-title">Candidate Records</h2>
+                    <div class="sponsored">
+                        Sponsored by the Democratic Alliance (Demo Project)
+                    </div>
+                </div>
 
-    <footer>
-        <p>@ 2026 P. Anthony Dibakoane | All Rights Reserved</p>
-    </footer>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Candidate ID</th>
+                                <th>Full Name</th>
+                                <th>Field</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="candidate-id">DA-C001</td>
+                                <td>Naledi Mokoena</td>
+                                <td>Communications &amp; Media</td>
+                                <td>
+                                    <select class="status-select" onchange="updateStatusColor(this)">
+                                        <option value="pending">Pending Review</option>
+                                        <option value="interview" selected>Interview Scheduled</option>
+                                        <option value="approved">Approved</option>
+                                        <option value="rejected">Rejected</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="candidate-id">DA-C002</td>
+                                <td>Michael van der Merwe</td>
+                                <td>Policy Research</td>
+                                <td>
+                                    <select class="status-select" onchange="updateStatusColor(this)">
+                                        <option value="pending">Pending Review</option>
+                                        <option value="interview">Interview Scheduled</option>
+                                        <option value="approved" selected>Approved</option>
+                                        <option value="rejected">Rejected</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="candidate-id">DA-C003</td>
+                                <td>Lerato Khumalo</td>
+                                <td>Voter Outreach</td>
+                                <td>
+                                    <select class="status-select" onchange="updateStatusColor(this)">
+                                        <option value="pending" selected>Pending Review</option>
+                                        <option value="interview">Interview Scheduled</option>
+                                        <option value="approved">Approved</option>
+                                        <option value="rejected">Rejected</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="candidate-id">DA-C004</td>
+                                <td>Thabo Nkosi</td>
+                                <td>Digital Strategy</td>
+                                <td>
+                                    <select class="status-select" onchange="updateStatusColor(this)">
+                                        <option value="pending">Pending Review</option>
+                                        <option value="interview">Interview Scheduled</option>
+                                        <option value="approved" selected>Approved</option>
+                                        <option value="rejected">Rejected</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="candidate-id">DA-C005</td>
+                                <td>David Smith</td>
+                                <td>IT Systems Support</td>
+                                <td>
+                                    <select class="status-select" onchange="updateStatusColor(this)">
+                                        <option value="pending">Pending Review</option>
+                                        <option value="interview">Interview Scheduled</option>
+                                        <option value="approved">Approved</option>
+                                        <option value="rejected" selected>Rejected</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
 
-</body>
+        <footer>
+            <div class="footer-content">
+                <div class="copyright">
+                    © 2026 P. Anthony Dibakoane | All Rights Reserved
+                </div>
+                <p class="disclaimer">
+                    *This is a student demo project and not affiliated with the Democratic Alliance.*
+                </p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>
